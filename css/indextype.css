@@ -178,3 +178,26 @@ html, body {
 		}
 			.topUpdateInfoList dd a { color: #69F; }
 			.topUpdateInfoList dd a:hover { text-decoration: underline; }
+
+.kotenbuNews {
+	margin-bottom: 30px;
+	padding: 5px 10px 0;
+	background: url(/img/newsArticleBg.png) repeat;
+	background: rgba(255, 255, 255, 0.4);
+}
+	.kotenbuNews a {
+		color: #cc6699;
+		text-decoration: underline;
+	}
+	.kotenbuNews a:hover { text-decoration: none; }
+	.kotenbuNews h3 {
+		padding: 10px 0 8px 3px;
+		font-size: 150%;
+		border-bottom: 2px #333 solid;
+	}
+	.kotenbuNews h4 {
+		margin: 10px 0 10px 10px;
+		padding-left: 5px;
+		font-size: 133%;
+		border-left: 3px #333 solid;
+	}
