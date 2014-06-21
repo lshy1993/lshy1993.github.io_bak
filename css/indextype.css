@@ -179,25 +179,41 @@ html, body {
 			.topUpdateInfoList dd a { color: #69F; }
 			.topUpdateInfoList dd a:hover { text-decoration: underline; }
 
-.kotenbuNews {
-	margin-bottom: 30px;
+.aboutMe {
+	/*margin-bottom: 30px;*/
+	margin: 40px 150px 30px 150px;
 	padding: 5px 10px 0;
-	background: url(/img/newsArticleBg.png) repeat;
+	background: url(../img/newsArticleBg.png) repeat;
 	background: rgba(255, 255, 255, 0.4);
 }
-	.kotenbuNews a {
+	.aboutMe a {
 		color: #cc6699;
 		text-decoration: underline;
 	}
-	.kotenbuNews a:hover { text-decoration: none; }
-	.kotenbuNews h3 {
+	.aboutMe a:hover { text-decoration: none; }
+	.aboutMe h3 {
 		padding: 10px 0 8px 3px;
-		font-size: 150%;
+		font-size: 18px;
 		border-bottom: 2px #333 solid;
 	}
-	.kotenbuNews h4 {
-		margin: 10px 0 10px 10px;
+	.aboutMe h4 {
+		text-align: left;
+		margin: 5px 0 5px 20px;
 		padding-left: 5px;
-		font-size: 133%;
+		font-size: 16px;
 		border-left: 3px #333 solid;
 	}
+	.aboutMe aside {
+		padding: 5px 5px 10px 0;
+		text-align: right;
+	}
+	.aboutMe ul {
+		padding: 10px 50px;
+		text-align: left;
+		font-size: 14px;
+	}
+		.aboutMe ul li { line-height: 1.8em; }
+#heimu{
+	background-color: #000;
+	color: #000;
+}
