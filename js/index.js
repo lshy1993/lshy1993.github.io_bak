@@ -1,4 +1,4 @@
-// JavaScript Document
+﻿// JavaScript Document
 $(window).load(function() {
 	$('#bg').maximage({
 		onFirstImageLoaded: function() {
@@ -13,7 +13,7 @@ $(window).load(function() {
 		minSpeed: 1,
 		maxSize: 20,
 		minSize: 4,
-		image: '/img/flake.png'
+		image: './img/flake.png'
 	});
 	$('#globalEffect').fadeIn(2000);
 	

@@ -3,7 +3,29 @@
 html, body {
 	height: 100%;
 	text-align: center;
+	margin: 0;
+	padding: 0;
+	font-size: 12px;
+	color: #333;
 }
+blockquote, div, dl, dt, dd,
+h1, h2, h3, h4, h5, h6,
+ol, ul, li, p, pre, span, td, th,
+article, aside, canvas, details, figcaption, figure, header,
+footer,hgroup, menu, nav, section, summary, audio, video {
+	margin: 0;
+	padding: 0;
+}
+ol, ul {
+	list-style: none;
+}
+.clearfix { zoom: 1; }
+.clearfix:before, .clearfix:after {
+	content: "";
+	display: table;
+	overflow: hidden;
+}
+.clearfix:after { clear: both; }
 #bg {
 	display: none;
 	z-index: -999;
@@ -35,6 +57,7 @@ html, body {
 	height: 100%;
 	display: none;
 }
+/*侧边导航栏*/
 #sideNavEffect{
 	position: fixed;
 	_position: absolute;
@@ -59,15 +82,16 @@ html, body {
 	position: absolute;
 	right: 60px;
 	top: 140px;
+	font-size: 14px;
 }
 	.sideList li {
 		position: relative;
 	}
 		.sideList li a {
-			display: block;
-			padding: 6px;
-			margin: 10px;
 			width: 160px;
+			margin: 10px;
+			padding: 6px;
+			display: block;
 			color: #000;
 			text-decoration:none;
 		}
@@ -86,25 +110,30 @@ html, body {
 			position: relative;
 		}
 		.subNav li a {
-			padding: 4px;
-			margin: 0;
-			width: 120px;
-			text-decoration: none;
+			margin: auto;
+			width: 90px;
+			display: block;
 			color: #000;
+			text-decoration: none;
 		}
 		.subNav li a:hover {
 			background: #3F9;
 			opacity: 0.7;
 		}
+		
+#sloganBox {
+	positon: relative;
+	min-height: 200px;
+	color: #000;
+}
 #indexPostBig {
 	position: absolute;
 	left: 440px;
-	font-family: "微软简中圆";
 	font-size: 32px;
 }
 	#indexPostBig p {
 		height: 35px;
-		margin-bottom: 2px;
+		margin-bottom: 32px;
 		opacity: 0;
 	}
 #topSlogan-01 { text-align: left;}
@@ -113,20 +142,19 @@ html, body {
 	position: absolute;
 	left: 840px;
 	top: 140px;
-	font-family: "微软简中圆";
 	font-size: 24px;
 }
 	#indexPostSmall p {
 		text-align: left;
 		height: 20px;
-		margin-bottom: 4px;
+		margin-bottom: 24px;
 		opacity: 0;
 	}
 #indexUpdateInfo {
 	position: relative;
-	padding-top : 400px;
-	left: 300px;
+	padding-top : 200px;
 	width: 720px!important;
+	margin:0 auto;
 	color: #fff;
 }
 	.topUpdateInfoWrapper { width: 720px!important; }
@@ -134,7 +162,7 @@ html, body {
 	position: absolute;
 	left: 0;
 	bottom: 50px;
-	z-index: 1;
+	z-index: 998;
 }
 #infoControlPrev a { background: url(../img/arrow.png) 0 0; }
 #infoControlPrev a:hover { background-position: left -70px; }
@@ -142,7 +170,7 @@ html, body {
 	position: absolute;
 	right: 0;
 	bottom: 50px;
-	z-index: 1;
+	z-index: 998;
 }
 #infoControlNext a { background: url(../img/arrow.png) right 0; }
 #infoControlNext a:hover { background-position: right -70px; }
@@ -159,11 +187,13 @@ html, body {
 	height: 150px!important;
 }
 	.topUpdateInfoList {
+		/*position: relative;*/
 		float: left;
 		width: 720px;
 		font-size: 14px;
 		text-align: left;
 		padding-left: 40px;
+		padding-top: 15px;
 	}
 		.topUpdateInfoList dt {
 			float: left;
@@ -178,16 +208,65 @@ html, body {
 		}
 			.topUpdateInfoList dd a { color: #69F; }
 			.topUpdateInfoList dd a:hover { text-decoration: underline; }
-
+/*正文部分*/
+#contentEffect {
+	width: 100%;
+	padding-bottom: 80px;
+}
+#mainContent {
+	width: 1000px;
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto;
+	padding: 30px 0 10px;
+	text-align: left;
+}
+#contentList {
+	margin: 5px 10px 15px;
+	padding-left: 0;
+	padding-bottom: 5px;
+	border-bottom: 1px #999 dotted;
+	list-style: none;
+}
+	#contentList li {
+		float: left;
+		padding-left: 20px;
+		background: url(../img/contentListBg.png) no-repeat 9px 6px;
+	}
+		#contentList li a {
+			color: #69F;
+			text-decoration: underline;
+		}
+		#contentList li a:hover { text-decoration: none; }
+	.pageTopLink {
+		clear: both;
+		position: relative;
+		padding: 15px 0 15px 0;
+		text-align: right;
+		/*background: url(/img/kotenbu/pageTopLinkBorder.png) no-repeat right 0;*/
+	}
+		.pageTopLink a {
+			position: absolute;
+			right: 30px;
+			top: 7px;
+			display: block;
+			width: 200px;
+			/*height: 7px;*/
+			border-top: 2px #333 dotted;
+			/*background: url(/img/kotenbu/pageTopLink.png) 0 0;*/
+		}
+		.pageTopLink a:hover { color: #333; /*background-position: left -7px;*/ }
+			/*.pageTopLink a span { display: none; }*/
 .aboutMe {
-	/*margin-bottom: 30px;*/
-	margin: 40px 150px 30px 150px;
+	margin-bottom: 30px;
+	/*margin: 20px 10px 30px 10px;*/
 	padding: 5px 10px 0;
 	background: url(../img/newsArticleBg.png) repeat;
 	background: rgba(255, 255, 255, 0.4);
 }
 	.aboutMe a {
-		color: #cc6699;
+		color: #69F;
 		text-decoration: underline;
 	}
 	.aboutMe a:hover { text-decoration: none; }
@@ -198,7 +277,7 @@ html, body {
 	}
 	.aboutMe h4 {
 		text-align: left;
-		margin: 5px 0 5px 20px;
+		margin: 10px 0 10px 10px;
 		padding-left: 5px;
 		font-size: 16px;
 		border-left: 3px #333 solid;
@@ -208,12 +287,50 @@ html, body {
 		text-align: right;
 	}
 	.aboutMe ul {
-		padding: 10px 50px;
+		padding: 10px 30px;
 		text-align: left;
 		font-size: 14px;
 	}
 		.aboutMe ul li { line-height: 1.8em; }
-#heimu{
+#aboutMember {
+	margin-bottom: 30px;
+	margin: auto;
+}
+
+#memberSelect {
+	margin: 0 15px 30px;
+	padding: 10px 0 25px;
+	background: url(../img/characterNavBorder.png) repeat-x left bottom;
+	font-size:16px;
+}
+	#memberSelect ul {
+		float: left;
+		width: 320px;
+		list-style: inside square;
+	}
+	#memberSelect ul li a {
+		display: block;
+		height: 30px;
+		width: 310px;
+		color: #000;
+		text-decoration: none;
+	}
+	#memberSelect ul li a:hover {
+		color: #69F;
+	}
+#memberInfo {
+	padding: 5px 10px 0;
+	margin-bottom: 30px;
+	background: url(../img/newsArticleBg.png) repeat;
+	background: rgba(255, 255, 255, 0.4);
+}
+.memberList{
+	position: relative;
+	float: left;
+	height: 520px;
+	/*display: none;*/
+}
+#heimu {
 	background-color: #000;
 	color: #000;
 }
