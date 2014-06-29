@@ -31,9 +31,9 @@
 						<li><a href="./works/01.html" title="第一作">第一作</a></li>
 					</ul>
 				</li>
-				<li id="sideNavList"><a href="./author.html" title="作者情报">作者情报</a></li>
+				<li id="sideNavList"><a href="./news.html" title="最新消息">最新消息</a></li>
 				<li id="sideNavList" class="subMenu">
-                	<a href="./project/" title="开发项目">开发近况</a>
+                	<a href="./project/" title="开发项目">开发项目</a>
                     <ul class="subNav">
 						<li><a href="./project/01.html" title="推理">我的留学生活</a></li>
 						<li><a href="./project/02.html" title="M&S"> M&S </a></li>
@@ -64,31 +64,57 @@
         	<div id="aboutMember">
                 <div id="memberSelect" class="clearfix">
                 	<ul>
-						<li><a href="#lucky" onClick="javascript:_gaq.push(['_trackPageview', '/lucky']);">幸运的路奇</a></li>
+						<li><a href="#lucky">幸运的路奇</a></li>
                         <li><a href="#meowalien">死鱼眼的喵星人</a></li>
 					</ul>
                     <ul>
                     	<li><a href="#member3">期待加入</a></li>
-                        <li><a href="#member4">？？？？</a></li>
+                        <li>？？？？</li>
                     </ul>
                     <ul>
-                    	<li><a href="#member5">期待加入</a></li>
-                        <li><a href="#member6">？？？？</a></li>
+                    	<li>？？？？</li>
+                        <li>？？？？</li>
                     </ul>
                 </div>
-                <div id="memberInfo" class="clearfix">
-                	<div id="lucky" class="memberList">
-                		<img src="./img/my.png" />
+                <div id="lucky" class="memberInfo">
+                	<div id="memberControlPrev"><a class="prev0 browse"></a></div>
+                	<div class="memberInfoPanel">
+                		<div id="lucky1" class="memberList">
+                			<img src="./img/my.png" />
+                        	<li>这里是名字</li>
+                        	<li>这里是简介1</li>
+                        	<li>还是简介2</li>
+                        	<li>简介三</li>
+                        	<li>介绍IV</li>
+                        	<li>⑤</li>
+                    	</div>
+                    	<div id="lucky2" class="memberList">
+                        	<li>这里是第二页</li>
+                    	</div>
+                	</div>
+                	<div id="memberControlNext"><a class="next0 browse"></a></div>
+                </div>
+                <div id="meowalien" class="memberInfo">
+                	<div id="memberControlPrev"><a class="prev1 browse"></a></div>
+                	<div class="memberInfoPanel">
+                    	<div id="meowalien1" class="memberList">
+                    		<img src="http://meowalienowo.github.io/img/head.jpg" />
+                        	<li>这是第一页</li>
+                    	</div>
+                    	<div id="meowalien2" class="memberList">
+                        	<li>这个人没有第二页</li>
+                    	</div>
                     </div>
-                    <div id="meowalien" class="memberList">
-                    	<img src="http://meowalienowo.github.io/img/head.jpg" />
+                    <div id="memberControlNext"><a class="next1 browse"></a></div>
+                </div>
+                <div id="member3" class="memberInfo">
+                	<div id="memberControlPrev"><a class="prev1 browse"></a></div>
+                	<div class="memberInfoPanel">
+                    	<div id="meowalien1" class="memberList">
+                        	<li>暂时没有这个人的信息~</li>
+                    	</div>
                     </div>
-                    <div id="member3" class="memberList">
-                    
-                    </div>
-                    <div id="member4" class="memberList">
-                    
-                    </div>
+                    <div id="memberControlNext"><a class="next1 browse"></a></div>
                 </div>
             </div>
             <div class="pageTopLink">
@@ -106,5 +132,24 @@
 <script src="./js/jquery.easing.1.3.js"></script>
 <script src="./js/jquery.colorbox.js"></script>
 <script src="./js/index.js"></script>
+<script>
+$('#memberSelect ul li a').click(function() {
+	characterID = $(this).attr('href');
+	$('.memberInfo').not(':animated').fadeOut(300, function() {
+		$('.memberInfo').removeClass('memberInfo');
+		$(characterID).fadeIn(300);
+		$(characterID).addClass('memberInfo');
+	});
+	return false;
+});	
+	$('.memberInfoPanel').each(function(i){
+		$(this).cycle({
+			fx: 'scrollHorz',
+			next: '.next'+ i,
+			prev: '.prev'+ i,
+		});
+	});
+	$('.memberInfoPanel').cycle('pause');
+</script>
 </body>
 </html>

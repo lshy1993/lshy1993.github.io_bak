@@ -64,7 +64,7 @@ ol, ul {
 	left: -960px;
 	top: 0;
 	width: 1000px;
-	z-index: 1;
+	z-index: 999;
 }
 #sideNav{
 	height: 640px;
@@ -252,12 +252,14 @@ ol, ul {
 			top: 7px;
 			display: block;
 			width: 200px;
-			/*height: 7px;*/
+			color: #69f;
+			text-decoration: underline;
 			border-top: 2px #333 dotted;
-			/*background: url(/img/kotenbu/pageTopLink.png) 0 0;*/
 		}
-		.pageTopLink a:hover { color: #333; /*background-position: left -7px;*/ }
-			/*.pageTopLink a span { display: none; }*/
+		.pageTopLink a:hover {
+			color: #333;
+			text-decoration: none;
+		}
 .aboutMe {
 	margin-bottom: 30px;
 	/*margin: 20px 10px 30px 10px;*/
@@ -265,11 +267,11 @@ ol, ul {
 	background: url(../img/newsArticleBg.png) repeat;
 	background: rgba(255, 255, 255, 0.4);
 }
-	.aboutMe a {
+	/*.aboutMe a {
 		color: #69F;
 		text-decoration: underline;
 	}
-	.aboutMe a:hover { text-decoration: none; }
+	.aboutMe a:hover { text-decoration: none; }*/
 	.aboutMe h3 {
 		padding: 10px 0 8px 3px;
 		font-size: 18px;
@@ -295,8 +297,30 @@ ol, ul {
 #aboutMember {
 	margin-bottom: 30px;
 	margin: auto;
+	position: relative;
 }
-
+#memberControlPrev {
+	position: absolute;
+	left: 0;
+	top: 400px;
+	z-index: 998;
+}
+#memberControlPrev a { background: url(../img/arrow.png) 0 0; }
+#memberControlPrev a:hover { background-position: left -70px; }
+#memberControlNext {
+	position: absolute;
+	right: 0;
+	top: 400px;
+	z-index: 998;
+}
+#memberControlNext a { background: url(../img/arrow.png) right 0; }
+#memberControlNext a:hover { background-position: right -70px; }
+	.browse {
+		width: 30px;
+		height: 70px;
+		display: block;
+		cursor: pointer;
+	}
 #memberSelect {
 	margin: 0 15px 30px;
 	padding: 10px 0 25px;
@@ -318,18 +342,60 @@ ol, ul {
 	#memberSelect ul li a:hover {
 		color: #69F;
 	}
-#memberInfo {
-	padding: 5px 10px 0;
+.memberInfo {
 	margin-bottom: 30px;
+	height: 600px!important;
+	background: url(../img/newsArticleBg.png) repeat;
+	background: rgba(255, 255, 255, 0.4);
+	display: none;
+}
+.memberList{
+	float: left;
+	padding: 20px 50px 0;
+	width: 900px;
+	height: 600px;
+	list-style: none;
+	/*display: none;*/
+}
+.memberList li {
+	/*float: left;*/
+}
+
+.updateNews {
+	margin-bottom: 30px;
+	padding: 5px 10px 0;
 	background: url(../img/newsArticleBg.png) repeat;
 	background: rgba(255, 255, 255, 0.4);
 }
-.memberList{
-	position: relative;
-	float: left;
-	height: 520px;
-	/*display: none;*/
-}
+	.updateNews a {
+		color: #69f;
+		text-decoration: none;
+	}
+	.updateNews a:hover {
+		text-decoration: underline;
+	}
+	.updateNews h3 {
+		padding: 10px 0 8px 3px;
+		font-size: 18px;
+		border-bottom: 2px #333 solid;
+	}
+	.updateNews h4 {
+		text-align: left;
+		margin: 10px 0 10px 10px;
+		padding-left: 5px;
+		font-size: 16px;
+		border-left: 3px #69F solid;
+	}
+	.updateNews aside {
+		padding: 5px 5px 10px 0;
+		text-align: right;
+	}
+	.updateNews ul {
+		padding: 10px 30px;
+		text-align: left;
+		font-size: 14px;
+	}
+		.updateNews ul li { line-height: 1.8em; }
 #heimu {
 	background-color: #000;
 	color: #000;
