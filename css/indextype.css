@@ -1,5 +1,6 @@
 @charset "utf-8";
 /* CSS Document */
+/*预设参数*/
 html, body {
 	height: 100%;
 	text-align: center;
@@ -19,6 +20,18 @@ footer,hgroup, menu, nav, section, summary, audio, video {
 ol, ul {
 	list-style: none;
 }
+
+/*选中色*/
+::selection {
+	color: #FF6178;
+	background: #FFE1EC;;
+}
+::-moz-selection {
+	color: #FF6178;
+	background: #FFE1EC;;
+}
+
+/*清除浮动*/
 .clearfix { zoom: 1; }
 .clearfix:before, .clearfix:after {
 	content: "";
@@ -26,6 +39,8 @@ ol, ul {
 	overflow: hidden;
 }
 .clearfix:after { clear: both; }
+
+/*背景图片*/
 #bg {
 	display: none;
 	z-index: -999;
@@ -48,6 +63,8 @@ ol, ul {
 		height: 100%;
 		width: 100%;
 	}
+	
+/*全网页特效*/
 #globalEffect{
 	position: relative;
 	width: 100%;
@@ -57,6 +74,7 @@ ol, ul {
 	height: 100%;
 	display: none;
 }
+
 /*侧边导航栏*/
 #sideNavEffect{
 	position: fixed;
@@ -70,14 +88,13 @@ ol, ul {
 	height: 640px;
 	background: url(../img/globalNavBg.png);
 }
-	h1 {
+	#sideNav h1 {
 		position: absolute;
 		right: 60px;
 		top: 20px;
 	}
-		h1 a { display: block; }
-		h1 a:hover { opacity: 0.6; }
-
+		#sideNav h1 a { display: block; }
+		#sideNav h1 a:hover { opacity: 0.6; }
 #sideNavMenu {
 	position: absolute;
 	right: 60px;
@@ -86,6 +103,7 @@ ol, ul {
 }
 	.sideList li {
 		position: relative;
+		list-style-type: none;
 	}
 		.sideList li a {
 			width: 160px;
@@ -99,57 +117,55 @@ ol, ul {
 			background: #3CF;
 			opacity: 0.7;
 		}
-#sideNavList {
-	list-style-type: none;
-}
-	.subNav{
+	.subNav {
 		display: none;
 		list-style-type: none;
 	}
-		.subNav li{
+		.subNav li {
 			position: relative;
 		}
-		.subNav li a {
-			margin: auto;
-			width: 90px;
-			display: block;
-			color: #000;
-			text-decoration: none;
-		}
-		.subNav li a:hover {
-			background: #3F9;
-			opacity: 0.7;
-		}
-		
+			.subNav li a {
+				margin: auto;
+				width: 90px;
+				display: block;
+				color: #000;
+				text-decoration: none;
+			}
+			.subNav li a:hover {
+				background: #3F9;
+				opacity: 0.7;
+			}
+/*首页标语*/
 #sloganBox {
 	positon: relative;
 	min-height: 200px;
 	color: #000;
 }
 #indexPostBig {
-	position: absolute;
-	left: 440px;
+	position: relative;
+	left: 200px;
+	width: 320px;
 	font-size: 32px;
 }
 	#indexPostBig p {
-		height: 35px;
-		margin-bottom: 32px;
+		margin-bottom: 16px;
 		opacity: 0;
 	}
 #topSlogan-01 { text-align: left;}
 #topSlogan-02 { text-align: right;}
 #indexPostSmall {
-	position: absolute;
-	left: 840px;
-	top: 140px;
+	position: relative;
+	left: 640px;
+	top: 10px;
+	width: 220px;
 	font-size: 24px;
 }
 	#indexPostSmall p {
 		text-align: left;
-		height: 20px;
-		margin-bottom: 24px;
+		margin-bottom: 12px;
 		opacity: 0;
 	}
+/*首页信息框*/
 #indexUpdateInfo {
 	position: relative;
 	padding-top : 200px;
@@ -208,7 +224,7 @@ ol, ul {
 		}
 			.topUpdateInfoList dd a { color: #69F; }
 			.topUpdateInfoList dd a:hover { text-decoration: underline; }
-/*正文部分*/
+/*正文-通用设定*/
 #contentEffect {
 	width: 100%;
 	padding-bottom: 80px;
@@ -239,27 +255,31 @@ ol, ul {
 			text-decoration: underline;
 		}
 		#contentList li a:hover { text-decoration: none; }
-	.pageTopLink {
-		clear: both;
-		position: relative;
-		padding: 15px 0 15px 0;
-		text-align: right;
-		/*background: url(/img/kotenbu/pageTopLinkBorder.png) no-repeat right 0;*/
+		
+/*PAGETOP*/
+.pageTopLink {
+	clear: both;
+	position: relative;
+	padding: 15px 0 15px 0;
+	text-align: right;
+	/*background: url(/img/kotenbu/pageTopLinkBorder.png) no-repeat right 0;*/
+}
+	.pageTopLink a {
+		position: absolute;
+		right: 30px;
+		top: 7px;
+		display: block;
+		width: 200px;
+		color: #69F;
+		text-decoration: underline;
+		border-top: 2px #333 dotted;
 	}
-		.pageTopLink a {
-			position: absolute;
-			right: 30px;
-			top: 7px;
-			display: block;
-			width: 200px;
-			color: #69f;
-			text-decoration: underline;
-			border-top: 2px #333 dotted;
-		}
-		.pageTopLink a:hover {
-			color: #333;
-			text-decoration: none;
-		}
+	.pageTopLink a:hover {
+		color: #333;
+		text-decoration: none;
+	}
+
+/*关于页面*/
 .aboutMe {
 	margin-bottom: 30px;
 	/*margin: 20px 10px 30px 10px;*/
@@ -294,6 +314,8 @@ ol, ul {
 		font-size: 14px;
 	}
 		.aboutMe ul li { line-height: 1.8em; }
+		
+/*成员介绍页面*/
 #aboutMember {
 	margin-bottom: 30px;
 	margin: auto;
@@ -361,6 +383,7 @@ ol, ul {
 	/*float: left;*/
 }
 
+/*最新消息页面*/
 .updateNews {
 	margin-bottom: 30px;
 	padding: 5px 10px 0;
@@ -368,7 +391,7 @@ ol, ul {
 	background: rgba(255, 255, 255, 0.4);
 }
 	.updateNews a {
-		color: #69f;
+		color: #69F;
 		text-decoration: none;
 	}
 	.updateNews a:hover {
@@ -396,6 +419,88 @@ ol, ul {
 		font-size: 14px;
 	}
 		.updateNews ul li { line-height: 1.8em; }
+		
+/*友情链接页面*/
+.partnerLink {
+	margin-bottom: 30px;
+	padding: 5px 10px 0;
+	background: url(../img/newsArticleBg.png) repeat;
+	background: rgba(255, 255, 255, 0.4);
+}
+	.partnerLink a {
+		color: #69F;
+		text-decoration: underline;
+	}
+	.partnerLink a:hover {
+		text-decoration: none;
+	}
+	.partnerLink h3 {
+		padding: 10px 0 8px 3px;
+		font-size: 18px;
+		border-bottom: 2px #333 solid;
+	}
+	.partnerLink h4 {
+		text-align: left;
+		margin: 10px 0 10px 10px;
+		padding-left: 5px;
+		font-size: 16px;
+		border-left: 3px #69F solid;
+	}
+	.partnerLink aside {
+		padding: 5px 5px 10px 0;
+		text-align: right;
+	}
+	.partnerLink ul {
+		padding: 10px 30px;
+		text-align: left;
+		font-size: 14px;
+	}
+		.partnerLink ul li { line-height: 1.8em; }
+
+/*联系方式页面*/
+#contractMe {
+	margin-bottom: 30px;
+	/*margin: 20px 10px 30px 10px;*/
+	padding: 5px 10px 0;
+	background: url(../img/newsArticleBg.png) repeat;
+	background: rgba(255, 255, 255, 0.4);
+}
+	#contractMe h3 {
+		padding: 10px 0 8px 3px;
+		font-size: 18px;
+		border-bottom: 2px #333 solid;
+	}
+	#contractMe h4 {
+		text-align: left;
+		margin: 10px 0 10px 10px;
+		padding-left: 5px;
+		font-size: 16px;
+		border-left: 3px #69F solid;
+	}
+	#contractMe aside {
+		padding: 5px 5px 10px 0;
+		text-align: right;
+	}
+	#contractMe ul {
+		padding: 10px 30px;
+		text-align: left;
+		font-size: 14px;
+	}
+		#contractMe ul li {
+			display: block;
+			padding: 5px;
+		}
+		#contractMe ul li a {
+			float: left;
+			height: 32px;
+			color: #69F;
+			text-decoration: none;
+		}
+		#contractMe ul li a p {
+			padding: 6px 10px 8px;
+		}
+		
+/*黑幕*/
 #heimu {
 	background-color: #000;
 	color: #000;

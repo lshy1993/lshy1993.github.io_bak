@@ -43,27 +43,23 @@ $(window).load(function() {
 	});
 	$('#topUpdateInfo').cycle('pause');
 	
-	//---------------------以下为测试用---------------------------
-	/*$('#topCatch-01').delay(1500).animate({width: 370}, {duration: 2500, easing: 'linear'});
-	$('#topCatch-02').delay(5000).animate({width: 250}, {duration: 1700, easing: 'linear'});
-	$('#topCatch-03').delay(7700).animate({width: 250}, {duration: 1700, easing: 'linear'});
-	$('#topOnair-01').delay(11400).animate({width: 280}, {duration: 1000, easing: 'linear'});
-	$('#topOnair-02').delay(12900).animate({width: 390}, {duration: 1000, easing: 'linear'});*/
-
-	//setGlobalNavPos();
-	
-	/*$('#sideNavEffect').hover(function() {
-		navMoveWidth = $(this).offset().left + 260;
-		navWidth = $(this).offset().left;
-		$(this).not(':animated').animate({left: navMoveWidth }, '200');
-	}, function() {
-		$(this).animate({left: navWidth}, '200');
+	$('.pageTopLink').on('click', function() {
+		$('body,html').stop(true,false).animate({scrollTop:0}, 1000, 'easeInOutCubic');
+		return false;
 	});
 	
-	$('.subMenu').hover(function() {
-		$('> ul:not(:animated)', this).toggle();
-	}, function() {
-		$('> ul:not(:animated)', this).toggle();
-	});*/
+	var pagetop = $('#pageTopWrap');
+	$(window).scroll(function () {
+		if ($(this).scrollTop() > 100) {
+			pagetop.fadeIn();
+		} else {
+			pagetop.fadeOut();
+		}
+	});
+	
+	$('#pageTopWarp').on('click', function() {
+		$('body,html').stop(true,false).animate({scrollTop:0}, 1000, 'easeInOutCubic');
+		return false;
+	});
 	
 });
