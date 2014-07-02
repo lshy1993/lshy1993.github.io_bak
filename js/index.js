@@ -22,13 +22,13 @@ $(window).load(function() {
 	}, function() {
 		$(this).animate({left:'-960px'});
 	});
-	
+
 	$('.subMenu').hover(function() {
-		$('> ul:not(:animated)', this).slideToggle();
+		$('.subNav:not(:animated)', this).slideToggle();
 	}, function() {
-		$('> ul:not(:animated)', this).slideToggle();
+		$('.subNav:not(:animated)', this).slideToggle();
 	});
-	
+
 	$('#topSlogan-01').delay(1500).animate({opacity:'1'}, {duration: 1500, easing: 'linear'});
 	$('#topSlogan-02').delay(3000).animate({opacity:'1'}, {duration: 1500, easing: 'linear'});
 	$('#topPost-01').delay(4500).animate({opacity:'1'}, {duration: 1000, easing: 'linear'});
