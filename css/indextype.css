@@ -500,8 +500,98 @@ ol, ul {
 			padding: 6px 10px 8px;
 		}
 		
+/*项目与作品*/
+.projectList {
+	padding: 5px 10px;
+	background: url(../img/newsArticleBg.png) repeat;
+	background: rgba(255, 255, 255, 0.4);
+}
+#caption {
+	text-align: right;
+	font-size: 36px;
+}
+#gameSelect {
+	float: left;
+	width: 180px;
+	padding-top: 10px;
+}
+	#gameSelect ul {
+		list-style-tyoe: none;
+		font-size: 14px;
+	}
+		#gameSelect ul li a {
+			color: #6E6E6E;
+			display: block;
+			padding-left: 10px;
+			text-decoration: none;
+		}
+		#gameSelect ul > li > a:hover, #gameSelect ul > li > .current {
+			color: #69F;
+			background: url(../img/gameSelect.png) no-repeat 0 4px;
+		}
+
+#gameInfo {
+	float: left;
+	width: 780px;
+}
+.gameType {
+	border-bottom: 1px #69F solid;
+	line-height: 27px;
+	text-align: left;
+}
+.gameDetail {
+	padding-bottom: 20px;
+}
+	.gameDetail h3 {
+		margin: 10px 0 5px;
+		font-size: 16px;
+		color: #69F;
+	}
+	.gameDetail ul li {
+		float: left;
+	}
+.gamePic a {
+	display: block;
+	width: 200px;
+	height: 150px;
+	padding: 5px 5px;
+}
+.gameSum {
+	width: 560px;
+	height: 150px;
+	padding: 5px 5px;
+}
+	.gameSum p {
+		padding: 5px;
+	}
+		.gameSum p a {
+			color: #69F;
+			text-decoration: underline;
+		}
+		.gameSum p a:hover {
+			text-decoration: none;
+		}
+	
 /*黑幕*/
 #heimu {
 	background-color: #000;
 	color: #000;
 }
+/*浮动pagetop*/
+#pageTopWrap {
+	display: none;
+	position: fixed;
+	right: 60px;
+	bottom: 40px;
+	z-index: 99;
+}
+	#pageTopWrap a {
+		background: url(../img/topUpdateInfoBg.png) repeat;
+		padding: 10px 20px;
+		text-decoration: none;
+		color: #fff;
+	}
+	#pageTopWrap a:hover {
+		text-decoration: underline;
+		color: #69F;
+	}

@@ -57,7 +57,7 @@ $(window).load(function() {
 		}
 	});
 	
-	$('#pageTopWarp').on('click', function() {
+	$('#pageTopWrap').on('click', function() {
 		$('body,html').stop(true,false).animate({scrollTop:0}, 1000, 'easeInOutCubic');
 		return false;
 	});
