@@ -1,0 +1,171 @@
+@charset "utf-8";
+/* CSS Document */
+/*预设*/
+html, body {
+	text-align: left;
+	margin: 0;
+	padding: 0;
+	font-size: 12px;
+	color: #333;
+	width: 100%;
+	height: 100%;
+	font-family: "Microsoft YaHei", 微软雅黑, Lucida Grade;
+}
+div, dl, dt, dd,
+h1, h2, h3, h4, h5, h6,
+ol, ul, li, p, pre, span, td, th,
+article, aside, canvas, details, figcaption, figure, header,
+footer,hgroup, menu, nav, section, summary, audio, video {
+	margin: 0;
+	padding: 0;
+}
+ol, ul {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+	color: #333;
+}
+a:hover {
+	text-decoration: none;
+}
+/*选中色*/
+::selection {
+	color: #FF6178;
+	background: #FFE1EC;;
+}
+::-moz-selection {
+	color: #FF6178;
+	background: #FFE1EC;;
+}
+
+/*清除浮动*/
+.clearfix { zoom: 1; }
+.clearfix:before, .clearfix:after {
+	content: "";
+	display: table;
+	overflow: hidden;
+}
+.clearfix:after { clear: both; }
+/*背景图片*/
+#siteWrap {
+	display: block;
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+}
+#bg {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: none;
+	z-index: -1;
+	top: 0;
+}
+#siteHeader {
+	position: relative;
+	display: block;
+}
+#globalNavWrap {
+	position: absolute;
+	top: 20px;
+	right: 0;
+}
+#globalNav {
+	margin: 10px 25px;
+	float: right;
+}
+	#globalNav li {
+		float: left;
+		padding: 5px 0;
+		opacity: 0;
+	}
+	#globalNav .nav-last a { border-right: none; }
+	#globalNav a {
+		display: block;
+		padding: 0 10px;
+		border-right: 1px #CCC solid;
+	}
+	#globalNav a:hover span {
+		border-bottom: 3px #CCC solid;
+	}
+	#globalNav li a span{
+		color: #FFF;
+		font-size: 14px;
+	}
+#siteContent {
+	position: fixed;
+	width: 100%;
+	bottom: 10px;
+	display: block;
+	min-width: 1024px;
+}
+.leftPart {
+	width: 250px;
+	left: 0;
+	padding: 10px 0 10px 10px;
+	border-radius: 0 10px 10px 0;
+	background: rgba(255, 255, 255, 0.8);
+}
+.rightPart {
+	width: 250px;
+	right: 0;
+	padding: 10px 0 10px 10px;
+	border-radius: 10px 0 0 10px;
+	background: rgba(255, 255, 255, 0.8);
+}
+#videoBox {
+	position: absolute;
+	height: 180px;
+	bottom: 0;
+}
+	#videoBox p {
+		text-align: center;
+	}
+#PVBox a:hover {
+	opacity: 0.6;
+}
+#topInfo {
+	position: absolute;
+	height: 180px;
+	bottom: 0;
+}
+	#topInfo dl {
+		padding-left: 10px;
+		overflow: auto;
+	}
+	#topInfo dt {
+		padding-top: 5px;
+	}
+	#topInfo dd {
+		padding: 0 5px;
+	}
+	#topInfo a {
+		
+	}
+	#topInfo a:hover {
+		background: #80DDEE;
+	}
+	#topInfo span {
+		color: #69F;
+	}
+#siteFoot {
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	display: block;
+}
+#footLink {
+	position: absolute;
+	height: 85px;
+	bottom: 40px;
+}
+	#footLink a:hover {
+		opacity: 0.6;
+	}
+#pageTopWrap {
+	position: absolute;
+	height: 35px;
+	bottom: 40px;
+}
