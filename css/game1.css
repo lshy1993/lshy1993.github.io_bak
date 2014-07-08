@@ -197,7 +197,7 @@ a:hover {
 	position: relative;
 	background: rgba(255,255,255,0.8);
 	width: 980px;
-	height: 720px;
+	min-height: 720px;
 	margin: 0 auto 145px;
 	display: block;
 }
@@ -251,5 +251,130 @@ a:hover {
 		padding: 0 20px 10px;
 	}
 	#mainSum li {
+		padding: 5px 0;
+	}
+#mainVersion {
+	padding-bottom: 40px;
+}
+#versionSelect {
+	float: left;
+	width: 180px;
+	padding: 10px 10px;
+}
+	#versionSelect li {
+		font-size: 16px;
+		text-align: center;
+		padding:0 0 5px 10px;
+	}
+	#versionSelect a:hover{
+		background: #80DDEE;
+	}
+	#versionSelect li .current {
+		color: #69F;
+	}
+#versionInfo {
+	float: left;
+	width: 760px;
+	padding: 10px 10px;
+}
+.versionDetail {
+	padding: 10px 0;
+	border-bottom: 1px #69F dashed;
+}
+	.versionDetail aside {
+		text-align: right;
+		padding: 0 10px;
+	}
+	.versionDetail ul {
+		padding: 0 15px;
+	}
+#groupSelect {
+	position: relative;
+	margin: 10px 10px;
+}
+#selectTip {
+	float: left;
+	width: 180px;
+	text-align: center;
+	color: #69F;
+	border-right: 1px #333 solid;
+}
+#selectMap {
+	float: left;
+	margin: 0 20px;
+}
+.groupMap {
+	display: block;
+	padding: 10px 0;
+	text-align: center;
+	font-size: 32px;
+}
+	.groupMap a {
+		float: left;
+		width: 160px;
+		height: 160px;
+		color: #FFF;
+		background: rgba(0, 0, 0, 0.6);
+		margin: 0 10px;
+	}
+	.groupMap a:hover {
+		color: #69F;
+		background: rgba(255, 255, 255, 0.8);
+	}
+.groupInfo {
+	position: relative;
+	margin: 10px 10px;
+	display: none;
+}
+#charaSelect {
+	float: left;
+}
+
+#returnBox {
+	padding: 10px 0;
+	margin: 0 10px;
+	text-align: center;
+	font-size: 32px;
+	border-bottom: 1px #69F solid;
+}
+	#returnBox a {
+		display: block;
+		width: 160px;
+		height: 160px;
+		color: #FFF;
+		background: rgba(0, 0, 0, 0.6);
+	}
+	#returnBox a:hover {
+		color: #69F;
+		background: rgba(255, 255, 255, 0.8);
+	}
+#charaList {
+	margin: 0 10px;
+	padding: 10px 0;
+}
+	#charaList a {
+		display: block;
+		padding-bottom: 5px;
+	}
+	#charaList a:hover {
+		color: #69F;
+	}
+.charaInfo {
+	float: left;
+	width: 760px;
+	height: 580px;
+	padding: 5px 10px;
+	display: none;
+}
+	.charaInfo img {
+		float: left;
+		margin: 10px 0;
+	}
+	.charaInfo ul {
+		float: left;
+		width: 500px;
+		margin: 10px 10px;
+	}
+	.charaInfo li {
 		padding: 5px 0;
 	}
